@@ -1,0 +1,42 @@
+{
+  "name": "btree",
+  "publisher": "Artem Yushkov",
+  "displayName": "Btree",
+  "description": "Behaviour Tree DSL",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/vOROn200/vscode-btree"
+  },
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "btree",
+        "aliases": [
+          "Btree",
+          "btree"
+        ],
+        "extensions": [
+          ".btree"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "btree",
+        "scopeName": "source.btree",
+        "path": "./syntaxes/btree.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
