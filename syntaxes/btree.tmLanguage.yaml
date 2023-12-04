@@ -33,7 +33,7 @@ repository:
   structures:
     patterns:
     - name: keyword.control.structure.btree
-      match: \b(sequence|fallback|parallel)\b|(?!\w+)\?|->|=>
+      match: \b(sequence|fallback|parallel|sequence_memory|fallback_memory|parallel_memory)\b|(?!\w+)\?\*|->\*|=>\*|\?|->|=>
     - name: entity.name.type.structure.btree
       match: \b(\w+)\b(?=\s*\{)
     - begin: '\{'
