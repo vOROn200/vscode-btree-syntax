@@ -5,7 +5,7 @@
   "description": "Behaviour Tree DSL",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/vOROn200/vscode-btree"
+    "url": "https://github.com/vOROn200/vscode-btree-syntax"
   },
   "version": "0.1.1",
   "engines": {
