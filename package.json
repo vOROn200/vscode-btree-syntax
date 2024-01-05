@@ -1,6 +1,6 @@
 {
-  "name": "btree",
-  "publisher": "vOROn200",
+  "name": "btree-syntax",
+  "publisher": "Artem Yushkov",
   "displayName": "Btree",
   "description": "Behaviour Tree DSL",
   "license": "MIT",
