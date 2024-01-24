@@ -20,6 +20,16 @@ To install this plugin, follow these steps in Visual Studio Code:
 
 After installing the plugin, syntax highlighting will be automatically applied to files with the `.btree` extension.
 
+## Remarshal Command
+
+To convert btree.tmLanguage.yaml to JSON format, use the following remarshal command:
+
+```bash
+remarshal syntaxes/btree.tmLanguage.yaml --of json > syntaxes/btree.tmLanguage.json
+```
+
+This command is useful for developers who need to convert the YAML syntax file to JSON. Ensure you have remarshal installed on your system to use this command.
+
 ## Support and Contribution
 
 If you have any questions, issues, or suggestions for improvement, please visit our [GitHub repository](https://github.com/vOROn200/vscode-btree-syntax.git).
