@@ -79,7 +79,7 @@ repository:
   decorators:
     patterns:
     - name: storage.type.decorator.btree
-      match: \@(inverter|!|failure_is_success|success_is_failure|force_success|force_fail|repeat_until_fail|repeat|retry|delay|timeout)
+      match: \@(inverter|!|fail_is_success|success_is_fail|fail_is_running|success_is_running|force_success|force_fail|repeat_until_fail|repeat_until_success|repeat|retry|delay|timeout)
     - name: variable.numeric.index.btree
       match: (?<=\[)(\d+)(?=\])
   mock_status:
