@@ -57,23 +57,22 @@ repository:
   actions_and_conditions:
     patterns:
     - name: entity.name.function.action.btree
-      begin: \b\w+\b(?=\s*\()
-      end: (?<=\))\s*
-      patterns:
-      - name: punctuation.parenthesis.open.btree
-        match: \(
-      - include: '#mock_status'
-      - name: punctuation.parenthesis.close.btree
-        match: \)
+      begin: \b\w+\b(?=\()
+      end: (?=\()
     - name: entity.name.function.condition.btree
-      begin: \b\w+\b\?(?=\s*\()
-      end: (?<=\))\s*
-      patterns:
-      - name: punctuation.parenthesis.open.btree
-        match: \(
-      - include: '#mock_status'
-      - name: punctuation.parenthesis.close.btree
-        match: \)
+      begin: \b\w+\b\?(?=\()
+      end: (?=\()
+    - begin: '\('
+      end: '\)'
+      beginCaptures:
+        '0':
+          name: punctuation.parenthesis.open.btree
+      endCaptures:
+        '0':
+          name: punctuation.parenthesis.close.btree
+    - name: storage.type.as.btree
+      match: \bas\b
+    - include: '#mock_status' 
   comments:
     patterns:
     - name: comment.block.btree
@@ -88,19 +87,16 @@ repository:
     - name: storage.type.decorator.if.btree
       begin: '@if'
       end: '\)'
-      beginCaptures:
-        '0': { name: storage.type.decorator.if.btree }
       endCaptures:
-        '0': { name: punctuation.parenthesis.close.btree }
+        '0':
+          name: punctuation.parenthesis.close.btree
       patterns:
-      - name: punctuation.parenthesis.open.btree
-        match: '\('
-      - include: '#logical_expression'
-      - name: punctuation.parenthesis.close.btree
-        match: '\)'
+        - name: punctuation.parenthesis.open.btree
+          match: '\('
+        - include: '#logical_expression'
   mock_status:
     name: variable.other.mock_status.btree
-    match: \b(fail|success|running|none)\b
+    match: \b(failure|success|running|ignored|none)\b
   references:
     name: entity.name.type.reference.btree
     match: \b([\u0400-\u04FF]|[a-zA-Z])([\u0400-\u04FFa-zA-Z0-9_]|[a-zA-Z0-9_])*\b
