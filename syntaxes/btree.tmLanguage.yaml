@@ -70,6 +70,10 @@ repository:
       endCaptures:
         '0':
           name: punctuation.parenthesis.close.btree
+      patterns:
+      - include: '#vars'
+      - name: punctuation.separator.comma.btree
+        match: ',' 
     - name: storage.type.as.btree
       match: \bas\b
     - include: '#mock_status' 
