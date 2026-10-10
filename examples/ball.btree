@@ -1,0 +1,26 @@
+? main {
+    child
+    ask_for_help() as success
+}
+-> child {
+    ? {
+        ball_found?() as failure
+        @! find_ball() as success
+    }
+    ? {
+        ball_close?() as failure
+        approach_ball() as failure
+    }
+    ? {
+        ball_grasped?() as success
+        grasp_ball() as running
+    }
+    ? {
+        bin_close?() as success
+        approach_bin() as running
+    }
+    ? {
+        ball_placed?() as success
+        place_bin() as running
+    }
+}

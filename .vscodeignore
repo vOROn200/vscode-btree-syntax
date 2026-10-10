@@ -1,4 +1,13 @@
 .vscode/**
 .vscode-test/**
+.github/**
+scripts/**
+examples/**
+node_modules/**
+syntaxes/*.yaml
 .gitignore
+.gitattributes
+package-lock.json
 vsc-extension-quickstart.md
+**/.DS_Store
+*.vsix

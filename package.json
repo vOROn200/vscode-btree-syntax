@@ -3,11 +3,24 @@
   "publisher": "vOROn200",
   "displayName": "Btree",
   "description": "Behaviour Tree DSL",
+  "keywords": [
+    "behaviour tree",
+    "behavior tree",
+    "btree",
+    "bt",
+    "dsl",
+    "syntax highlighting"
+  ],
   "license": "MIT",
   "repository": {
+    "type": "git",
     "url": "https://github.com/vOROn200/vscode-btree-syntax"
   },
-  "version": "0.1.10",
+  "bugs": {
+    "url": "https://github.com/vOROn200/vscode-btree-syntax/issues"
+  },
+  "homepage": "https://github.com/vOROn200/vscode-btree-syntax#readme",
+  "version": "0.1.11",
   "engines": {
     "vscode": "^1.84.0"
   },
@@ -37,7 +50,13 @@
       }
     ]
   },
+  "scripts": {
+    "build:grammar": "node scripts/build-grammar.js",
+    "check:grammar": "node scripts/build-grammar.js --check",
+    "package": "vsce package"
+  },
   "devDependencies": {
-    "js-yaml": "^4.1.0"
+    "@vscode/vsce": "^4.0.0",
+    "js-yaml": "^4.3.2"
   }
 }

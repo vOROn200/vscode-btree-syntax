@@ -1,0 +1,11 @@
+/* Variables */
+var1 = true
+var2 = "str"
+var3 = 1
+
+-> main {
+    memory_process?()
+    @if(var1 && var2 != "str") child
+    @repeat[1] delay_node()
+    bot_logic(var3, 'arg')
+}
