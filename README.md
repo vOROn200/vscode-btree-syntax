@@ -50,8 +50,7 @@ npm run package         # build a .vsix
 
 Press <kbd>F5</kbd> to launch an Extension Development Host and open a file from `examples/`.
 
-Publishing is done by GitHub Actions on push to `master` once `version` in `package.json` is bumped.
-Required repository secret: `VSCE_TOKEN` (Visual Studio Marketplace personal access token).
+How to release a new version: see [RELEASING.md](RELEASING.md).
 
 ## Support and Contribution
 

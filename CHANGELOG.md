@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Changed
 - Grammar JSON is now generated with `npm run build:grammar` (no external `remarshal` needed); CI fails if it is out of date.
-- CI: updated actions, switched to `@vscode/vsce`, publishing no longer silently ignores errors and skips already published versions.
+- CI: updated actions, switched to `@vscode/vsce`; CI now only builds the `.vsix`, publishing is manual (see RELEASING.md).
 - Packaged extension no longer contains development files.
 
 ## [0.1.10] - 2024-11-08

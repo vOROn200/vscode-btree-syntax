@@ -11,3 +11,4 @@ package-lock.json
 vsc-extension-quickstart.md
 **/.DS_Store
 *.vsix
+RELEASING.md
